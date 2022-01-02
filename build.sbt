@@ -36,8 +36,8 @@ val CommonSettings = Seq(
 
 // sub projects
 
-lazy val subProject = {
-  (project in file("subproject"))
+lazy val associateImpl = {
+  (project in file("associate-implementation"))
     .settings(CommonSettings)
     .settings(
       libraryDependencies ++= CommonDependencies
