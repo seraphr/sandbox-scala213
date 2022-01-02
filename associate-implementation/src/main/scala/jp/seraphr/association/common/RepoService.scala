@@ -1,5 +1,11 @@
 package jp.seraphr.association.common
 
 trait RepoService {
-  def createNewRepo(templateId: String, newRepoId: String): Unit
+
+  /**
+   * @param templateId
+   * @param newRepoId
+   * @return 作成したRepository
+   */
+  def createNewRepo(templateId: String, newRepoId: String): Repository
 }
