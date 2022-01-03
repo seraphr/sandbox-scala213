@@ -14,5 +14,5 @@ trait FileStorage extends common.FileStorage {
   }
 }
 
-trait FileRepositoryStorage extends common.FileRepositoryStorage with FileStorage
-trait FileTemplateStorage   extends common.FileTemplateStorage with FileStorage
+class FileRepositoryStorage(val mUnderlying: common.MemoryStorage) extends common.FileRepositoryStorage with FileStorage {}
+class FileTemplateStorage(val mUnderlying: common.MemoryStorage) extends common.FileTemplateStorage with FileStorage

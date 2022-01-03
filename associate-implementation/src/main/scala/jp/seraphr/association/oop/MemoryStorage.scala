@@ -4,5 +4,5 @@ import jp.seraphr.association.common
 
 trait MemoryStorage extends common.MemoryStorage
 
-trait MemoryRepositoryStorage extends MemoryStorage with common.MemoryRepositoryStorage
-trait MemoryTemplateStorage   extends MemoryStorage with common.MemoryTemplateStorage
+class MemoryRepositoryStorage extends MemoryStorage with common.MemoryRepositoryStorage
+class MemoryTemplateStorage   extends MemoryStorage with common.MemoryTemplateStorage

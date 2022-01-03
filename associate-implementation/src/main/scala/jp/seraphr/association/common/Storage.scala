@@ -5,3 +5,6 @@ trait Storage {
   def get(repoId: String): Option[Repository]
   def all: Seq[Repository]
 }
+
+trait RepositoryStorage extends Storage
+trait TemplateStorage   extends Storage

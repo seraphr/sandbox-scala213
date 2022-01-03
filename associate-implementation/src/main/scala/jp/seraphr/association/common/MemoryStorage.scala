@@ -16,5 +16,5 @@ trait MemoryStorage extends Storage {
   override def all: Seq[Repository]                    = mRepos.values.toSeq
 }
 
-trait MemoryRepositoryStorage extends MemoryStorage
-trait MemoryTemplateStorage   extends MemoryStorage
+trait MemoryRepositoryStorage extends RepositoryStorage with MemoryStorage
+trait MemoryTemplateStorage   extends TemplateStorage with MemoryStorage

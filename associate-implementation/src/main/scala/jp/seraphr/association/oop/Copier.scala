@@ -15,7 +15,8 @@ class FileCopier(val templateStorage: FileTemplateStorage, val repoStorage: File
   }
 }
 
-class MemoryCopier(val templateStorage: FileTemplateStorage, val repoStorage: FileRepositoryStorage) extends Copier {
+class MemoryCopier(val templateStorage: MemoryTemplateStorage, val repoStorage: MemoryRepositoryStorage)
+    extends Copier {
   override def copy(templateId: String, repoId: String): Unit = {
     val tRepo = templateStorage.get(templateId).getOrElse(throw new RuntimeException(s"not found: ${templateId}"))
     repoStorage.add(tRepo.copy(id = repoId))
